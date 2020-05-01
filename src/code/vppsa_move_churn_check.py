@@ -87,7 +87,7 @@ def check_email(user,sender_email, path_input,path_output, reciever_emails):
         message.Subject = 'VPPSA move and Churn Report on {datetime}'.format(datetime=today)
         message.Body = '''Hi all,
             
-            On {today_date}, from {category_all_num} unique NMIs in the VPP list, {category_2_num} NMIs are identified as 2_PowerDirect, {category_3_num} NMIs are identified as 3_VPPChurn_New_NonAGL_Customer , {category_4_num} NMIs are identified as 4_VPPChurn_New_AGL_Customer, and %s NMIs are identified as 1_Current. 
+            On {today_date}, from {category_all_num} unique NMIs in the VPP list, {category_2_num} NMIs are identified as 2_PowerDirect, {category_3_num} NMIs are identified as 3_VPPChurn_New_NonAGL_Customer , {category_4_num} NMIs are identified as 4_VPPChurn_New_AGL_Customer, and {category_1_num} NMIs are identified as 1_Current. 
             The report is attached to this email and can be find at {path_output_file_loc}.
             
             Definition of Flags:
@@ -101,7 +101,7 @@ def check_email(user,sender_email, path_input,path_output, reciever_emails):
             
             Kind regards,
             
-            Javad'''.format(today_date = today, category_all_num = category_all, category_2_num = category_2, category_3_num = category_3, category_4_num =category_4, category_1 = category_1, path_output_file_loc = path_output_file)
+            Javad'''.format(today_date = today, category_all_num = category_all, category_2_num = category_2, category_3_num = category_3, category_4_num =category_4, category_1_num = category_1, path_output_file_loc = path_output_file)
     
         message.attach(path_output_file)
         
